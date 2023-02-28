@@ -1,4 +1,5 @@
 """Kruskal's_algorithm"""
+import timeit
 from networkx.algorithms import tree
 import random
 import networkx as nx
@@ -87,3 +88,4 @@ check = tree.minimum_spanning_tree(grph, algorithm='kruskal')
 print(sorted(check.edges(data=True), key = lambda x: x[2]['weight']))
 print()
 print(kruskal(edges))
+print(timeit.timeit())
